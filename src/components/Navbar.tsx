@@ -37,24 +37,18 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle navigation - always navigate to the corresponding route
-  const handleNavigation = (sectionId: string) => {
-    navigate(`/${sectionId}`);
-    setIsOpen(false);
-  };
-
-  // Handle home navigation
-  const handleHomeNavigation = () => {
-    navigate('/');
+  // Unified navigation handler
+  const handleNavigation = (path: string) => {
+    navigate(path);
     setIsOpen(false);
   };
 
   const navItems = [
-    { name: 'Home', id: 'home', action: handleHomeNavigation, icon: Heart },
-    { name: 'Menu', id: 'menu', action: () => handleNavigation('menu'), icon: ChefHat },
-    { name: 'Gallery', id: 'gallery', action: () => handleNavigation('gallery'), icon: Star },
-    { name: 'About', id: 'about', action: () => handleNavigation('about'), icon: MapPin },
-    { name: 'Contact', id: 'contact', action: () => handleNavigation('contact'), icon: Phone }
+    { name: 'Home', path: '/', id: 'home', icon: Heart },
+    { name: 'Menu', path: '/menu', id: 'menu', icon: ChefHat },
+    { name: 'Gallery', path: '/gallery', id: 'gallery', icon: Star },
+    { name: 'About', path: '/about', id: 'about', icon: MapPin },
+    { name: 'Contact', path: '/contact', id: 'contact', icon: Phone }
   ];
 
   return (
@@ -79,7 +73,7 @@ const Navbar = () => {
             {/* Enhanced Logo - Always Visible Dark Pink */}
             <div className="flex items-center group">
               <button 
-                onClick={handleHomeNavigation}
+                onClick={() => handleNavigation('/')}
                 className={`relative text-4xl md:text-5xl font-playfair font-bold transition-all duration-500 hover:scale-110 z-10 group-hover:drop-shadow-2xl ${
                   isScrolled 
                     ? 'text-pink-700' 
@@ -111,7 +105,7 @@ const Navbar = () => {
                 return (
                   <button
                     key={item.id}
-                    onClick={item.action}
+                    onClick={() => handleNavigation(item.path)}
                     className={`group relative px-6 py-3 font-semibold transition-all duration-300 rounded-2xl overflow-hidden ${
                       isActive
                         ? isScrolled 
@@ -234,7 +228,7 @@ const Navbar = () => {
               return (
                 <button
                   key={item.id}
-                  onClick={item.action}
+                  onClick={() => handleNavigation(item.path)}
                   className={`group flex items-center w-full text-left px-6 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 ${
                     isActive
                       ? 'text-white bg-gradient-to-r from-pink-500 to-rose-500 shadow-lg shadow-pink-500/30 border-l-4 border-white/50'
