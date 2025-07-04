@@ -11,38 +11,18 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showReservationGlow, setShowReservationGlow] = useState(false);
   
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.hash === '#/' || location.hash === '';
 
   // Update active section based on current route
   useEffect(() => {
-    if (!isHomePage) {
-      const path = location.pathname.replace('/', '');
-      setActiveSection(path || 'home');
-    }
-  }, [location.pathname, isHomePage]);
+    const path = location.hash.replace('#/', '');
+    setActiveSection(path || 'home');
+  }, [location.hash]);
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 20);
-      
-      // Update active section based on scroll position
-      const sections = ['home', 'menu', 'gallery', 'about', 'contact'];
-      const scrollPosition = scrollTop + 120;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
