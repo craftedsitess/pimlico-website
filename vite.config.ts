@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   // Base path for GitHub Pages deployment
   // Repository name: pimlico-website
-    base: mode === 'production' ? '/rose-petal-menu-design-main/' : '/',
+      base: mode === 'production' ? '/pimlico-website/' : '/',
   server: {
     host: "::",
     port: 8080,
