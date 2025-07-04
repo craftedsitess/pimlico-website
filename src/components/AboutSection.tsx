@@ -1,4 +1,5 @@
 import React from 'react';
+import vibe1 from '@/assets/images/vibe1.png';
 
 const AboutSection = () => {
   return (
@@ -33,7 +34,7 @@ const AboutSection = () => {
           <div className="relative animate-fadeInUp">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover-lift-intense animate-glow">
               <img
-                src="/originals/vibe1.png"
+                src={vibe1}
                 alt="Pimlico Restaurant - Elegant Interior Design and Sophisticated Ambiance"
                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
