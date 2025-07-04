@@ -8,7 +8,7 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'interior' | 'food' | 'beverages'>('all');
 
-    const galleryImages = [
+        const galleryImages = [
     // Interior Images (Vibe)
     {
       id: 1,
