@@ -57,42 +57,15 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle navigation - either scroll on home page or navigate to route
+  // Handle navigation - always navigate to the corresponding route
   const handleNavigation = (sectionId: string) => {
-    if (isHomePage) {
-      // On home page - scroll to section
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const navHeight = 80;
-        const elementPosition = element.offsetTop - navHeight;
-        
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
-    } else {
-      // On other pages - navigate to route
-      if (sectionId === 'home') {
-        navigate('/');
-      } else {
-        navigate(`/${sectionId}`);
-      }
-    }
+    navigate(`/${sectionId}`);
     setIsOpen(false);
   };
 
   // Handle home navigation
   const handleHomeNavigation = () => {
-    if (isHomePage) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-      setActiveSection('home');
-    } else {
-      navigate('/');
-    }
+    navigate('/');
     setIsOpen(false);
   };
 
