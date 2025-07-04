@@ -4,6 +4,17 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { X, ZoomIn, Camera, MapPin, Star, Utensils, Wine, Coffee, Heart } from 'lucide-react';
 
+// Import images directly
+import vibe1 from '/originals/vibe1.png';
+import vibe2 from '/originals/vibe2.png';
+import vibe3 from '/originals/vibe3.png';
+import food1 from '/originals/food1.png';
+import food2 from '/originals/food2.png';
+import food3 from '/originals/food3.png';
+import beverage1 from '/originals/beverage1.png';
+import beverage2 from '/originals/beverage2.png';
+import beverage3 from '/originals/beverage3.png';
+
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'interior' | 'food' | 'beverages'>('all');
@@ -13,7 +24,7 @@ const GallerySection = () => {
     {
       id: 1,
       category: 'interior',
-      src: '/originals/vibe1.png',
+      src: vibe1,
       alt: 'Elegant dining atmosphere at Pimlico Erandwane with sophisticated interior design',
       title: 'Sophisticated Ambiance',
       description: 'Experience the refined elegance of our carefully curated dining spaces'
@@ -21,7 +32,7 @@ const GallerySection = () => {
     {
       id: 2,
       category: 'interior',
-      src: '/originals/vibe2.png',
+      src: vibe2,
       alt: 'Modern interior design at Pimlico restaurant with warm lighting and contemporary furniture',
       title: 'Contemporary Design',
       description: 'Modern aesthetics blended with comfort for the perfect dining atmosphere'
@@ -29,7 +40,7 @@ const GallerySection = () => {
     {
       id: 3,
       category: 'interior',
-      src: '/originals/vibe3.png',
+      src: vibe3,
       alt: 'Premium dining space at Pimlico Erandwane showcasing elegant decor and ambiance',
       title: 'Premium Dining Space',
       description: 'Luxurious interiors designed to create memorable dining experiences'
@@ -38,7 +49,7 @@ const GallerySection = () => {
     {
       id: 4,
       category: 'food',
-      src: '/originals/food1.png',
+      src: food1,
       alt: 'Exquisite gourmet dish showcasing culinary artistry at Pimlico restaurant',
       title: 'Culinary Artistry',
       description: 'Each dish is crafted with precision and presented as a work of art'
@@ -46,7 +57,7 @@ const GallerySection = () => {
     {
       id: 5,
       category: 'food',
-      src: '/originals/food2.png',
+      src: food2,
       alt: 'Fresh and vibrant food preparation highlighting quality ingredients at Pimlico',
       title: 'Fresh & Vibrant',
       description: 'Premium ingredients sourced daily to ensure the finest quality'
@@ -54,7 +65,7 @@ const GallerySection = () => {
     {
       id: 6,
       category: 'food',
-      src: '/originals/food3.png',
+      src: food3,
       alt: 'Signature dish at Pimlico Erandwane featuring innovative flavors and presentation',
       title: 'Signature Creations',
       description: 'Innovative dishes that blend international flavors with local inspiration'
@@ -63,7 +74,7 @@ const GallerySection = () => {
     {
       id: 7,
       category: 'beverages',
-      src: '/originals/beverage1.png',
+      src: beverage1,
       alt: 'Artfully crafted cocktail with premium spirits at Pimlico Erandwane bar',
       title: 'Artisanal Cocktails',
       description: 'Handcrafted cocktails using premium spirits and fresh ingredients'
@@ -71,7 +82,7 @@ const GallerySection = () => {
     {
       id: 8,
       category: 'beverages',
-      src: '/originals/beverage2.png',
+      src: beverage2,
       alt: 'Curated wine selection and premium beverages at Pimlico restaurant',
       title: 'Premium Beverages',
       description: 'Carefully curated selection of wines and specialty drinks'
@@ -79,7 +90,7 @@ const GallerySection = () => {
     {
       id: 9,
       category: 'beverages',
-      src: '/originals/beverage3.png',
+      src: beverage3,
       alt: 'Elegant beverage presentation showcasing variety at Pimlico Erandwane',
       title: 'Beverage Excellence',
       description: 'From coffee to cocktails, every beverage is served with excellence'
