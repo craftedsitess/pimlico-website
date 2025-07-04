@@ -219,6 +219,7 @@ const GallerySection = () => {
                   <p className="text-pink-700 leading-relaxed">
                     {image.description}
                   </p>
+                  <p className="text-xs text-gray-500 break-all">Debug Path: {image.src}</p>
                 </div>
               </CardContent>
             </Card>
