@@ -1,18 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to my project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/2a9e2437-bf17-494c-9f99-afa96e091390](https://craftedsitess.github.io/pimlico-website/)
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/2a9e2437-bf17-494c-9f99-afa96e091390) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+**URL**: https://craftedsitess.github.io/pimlico-website/
 
 **Use your preferred IDE**
 
@@ -59,12 +49,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2a9e2437-bf17-494c-9f99-afa96e091390) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
 
