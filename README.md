@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/2a9e2437-bf17-494c-9f99-afa96e091390
+**URL**: https://lovable.dev/projects/2a9e2437-bf17-494c-9f99-afa96e091390](https://craftedsitess.github.io/pimlico-website/)
 
 ## How can I edit this code?
 
